@@ -1,0 +1,5 @@
+so far:
+1) extract Lat Long matrix from shapefile
+2) run Modistool to extract a subset of data for ET and LC and LUC.
+3) organize the data in year by year matrixes
+4) first calculation clustering data per a) landuse; b) landuse change direction; 
