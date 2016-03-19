@@ -8,8 +8,8 @@ colClasses=c("character",rep("numeric",4),rep("character",2), rep("numeric",4),
              rep("character",5),rep("numeric",11), "character")
 NACP_TERRA_PNW_leaf_trait <- read.csv("~/Documents/Data/NACP_TERRA-PNW_1292/data/NACP_TERRA_PNW_leaf_trait.csv",
                                       header=TRUE, colClasses = colClasses)
-colClasses=c("character",rep("numeric",3),rep("character",2), rep("numeric",2),"character",rep("numeric",6),"character", rep("numeric",9))
-NACP_TERRA_PNW_soil <- read.csv("~/Documents/Data/NACP_TERRA-PNW_1292/data/NACP_TERRA_PNW_soil.csv",
+colClasses=c("character",rep("numeric",3),rep("character",2), rep("numeric",1),rep("character",2),rep("numeric",6),"character", rep("numeric",9))
+NACP_TERRA_PNW_soil <- read.csv("~/Documents/Data/NACP_TERRA-PNW_1292//data/NACP_TERRA_PNW_soil.csv",
                                 header=TRUE, colClasses = colClasses)
 
 leafTraits <- cbind(NACP_TERRA_PNW_leaf_trait[2:5],NACP_TERRA_PNW_leaf_trait[8:11],NACP_TERRA_PNW_leaf_trait[17:27])
