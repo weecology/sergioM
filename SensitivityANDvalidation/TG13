@@ -1,0 +1,15 @@
+library(devtools)
+install_url("https://dl.dropboxusercontent.com/s/ccvpnvblf3vzuvs/BayesianTools_0.0.0.9000.tar.gz")
+library(BayesianTools)
+?BayesianTools
+vignette("AQuickStart")
+vignette(package = "BayesianTools")
+set.seed(123)
+PAR <- VSEMcreatePAR(1:1000)
+plotTimeSeries(observed = PAR)
+
+# we need reference parameters + upper and lower limits for calibration.
+# standard deviation of the observation error that we will add to our data
+refPars <- VSEMgetDefaults()
+prior <- createUniformPrior(lower = refPars$lower[parSel], upper = refPars$upper[parSel])
+baySetup <- createBayesianSetup(likelihood, prior, best = refPars$best[parSel], names=rownames(refPars)[parSel])
