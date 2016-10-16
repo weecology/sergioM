@@ -8,6 +8,9 @@ set.seed(123)
 PAR <- VSEMcreatePAR(1:1000)
 plotTimeSeries(observed = PAR)
 
+#./3D_CMCC_Forest_Model -i ../input/DKSoroe -p ../input/parameterization -o ../output/debug_output/debug_output -b ../output/daily_output/daily_output -e ../output/annual_output/annual_output -f ../output/monthly_output/monthly_output -d Soroe_input_1ha_2001.txt -m climate_txt/111_111_20012014_new_db.txt -s Soroe_soil.txt -t Soroe_topo.txt -c Soroe_settings.txt -n ../output/soil_output/soil_output
+
+
 # we need reference parameters + upper and lower limits for calibration.
 # standard deviation of the observation error that we will add to our data
 refPars <- VSEMgetDefaults()
